@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.child-cont {
+    background: linear-gradient(135deg, #87CEEB, #4A90E2);
+}
+
+.form-cont {
+    border: none;
+}
+
+.search {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: none;
+    border: 1px solid gray;
+    border-right: none;
+}
+
+.search-btn {
+    border: none;
+    border: 1px solid gray;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
+}
