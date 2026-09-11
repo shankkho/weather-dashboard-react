@@ -30,8 +30,8 @@ const Home = () => {
     return (
 
         <>
-            <div className='w-100 h-100vh'>
-                <div className='child-cont d-flex justify-content-between p-3 '>
+            <div className=' main-cont w-100 h-100vh '>
+                <div className='child-cont d-flex justify-content-between p-3 pt-1 pb-2  '>
                     <div >
                         <form className='form-cont form-control bg-transparent d-flex gap-0'>
                             <input className='search bg-transparent form-control  shadow ' type='search' placeholder='Search city' />
@@ -51,31 +51,31 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className='row  bg-primary '>
+                <div className='row p-2 pb-0'>
 
-                    <div className='col-12 col-lg-8 col-md-8  ' >
+                    <div className='col-12 col-lg-8 col-md-8 pb-0' >
                         <CurrentWeather />
                     </div>
 
-                    <div className='col-12 col-lg-4 col-md-4  '>
-                        <div className='bg-secondary'>
+                    <div className='col-12 col-lg-4 col-md-4 ps-0 TodayWeather'>
+                        <div className='shadow p-2 TodayWeather'>
                             <TodayWeather />
                         </div>
 
-                        <div className='bg-white'>
+                        <div className=' mt-3 shadow SunRiseSet'>
                             <SunRiseSet />
                         </div>
                     </div>
 
                 </div>
-
-
-                <div>
-                    <ForeCast />
+                <div className='p-2'>
+                    <div className=' forecast-main p-2 '>
+                        <ForeCast />
+                    </div>
                 </div>
+
             </div>
         </>
-
 
     );
 }
