@@ -7,7 +7,7 @@ import { LuClock5 } from "react-icons/lu";
 
 const CurrentWeather = ({weather}) => {
 
-    console.log(weather);
+
     
 
     return (

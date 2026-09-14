@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
+
 }
 
 .main-cont {
@@ -65,4 +65,27 @@
 }
 .moreday{
     border-radius: 10px;
+}
+.today-weather-list {
+    height: 250px;
+    overflow-y: auto;
+}
+.weather-time {
+    width: 70px;
+  
+}
+
+.weather-icon {
+    width: 50px;
+    text-align: center;
+}
+
+.weather-temp {
+    width: 70px;
+  
+}
+
+.weather-description {
+    width: 120px;
+    
 }

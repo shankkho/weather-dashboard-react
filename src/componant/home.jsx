@@ -32,13 +32,12 @@ const Home = () => {
             const api = `https://api.openweathermap.org/data/2.5/weather?q=${allvalues.FirstCity}&units=metric&appid=b6804eeabb0bf9ff9063793d5601d918`
             const response = await fetch (api);
             const data = await response.json();
-            console.log(data)
+           
 
             if(response.ok){
-                // console.log(data)
                 setWeather(data);
                 isApifetch(true)
-                console.log(weather);
+           
             }
             else{
                 setvalues({...allvalues,errorData: data.message});
@@ -134,12 +133,12 @@ const Home = () => {
 
                                     {/* today brodcast */}
                                     <div className='shadow p-2 TodayWeather'>
-                                        <TodayWeather />
+                                        <TodayWeather weather = {weather}  />
                                     </div>
 
                                     {/* sunrise and sunset */}
                                     <div className=' mt-3 shadow SunRiseSet'>
-                                        <SunRiseSet />
+                                        <SunRiseSet weather = {weather}/>
                                     </div>
                                 </div>
 
