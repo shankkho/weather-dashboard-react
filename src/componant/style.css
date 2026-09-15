@@ -89,3 +89,116 @@
     width: 120px;
     
 }
+
+.main-cont {
+    min-height: 100vh;
+    padding: 15px;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #172554,
+        #1e3a8a
+    );
+}
+.search-cont{
+     background: linear-gradient(
+        135deg,
+        #0f172a,
+        #172554,
+        #1e3a8a
+    );
+}
+
+
+
+.child-cont {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(12px);
+}
+
+
+
+.weather-card,
+.forecast-main {
+    background: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+
+.weather-card {
+    padding: 15px;
+    transition: 0.3s ease;
+}
+
+.weather-card:hover,
+.forecast-main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.28);
+}
+
+
+
+.forecast-main {
+    overflow: hidden;
+}
+
+
+.moreday {
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    transition: 0.3s ease;
+}
+
+.moreday:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+
+
+.forecast-main .d-flex {
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.forecast-main .d-flex::-webkit-scrollbar {
+    height: 5px;
+}
+
+.forecast-main .d-flex::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .main-cont {
+        padding: 8px;
+       
+    }
+
+    .child-cont {
+        border-radius: 14px;
+    }
+
+    .weather-card,
+    .forecast-main {
+        border-radius: 15px;
+    }
+
+    .moreday {
+        min-width: 135px;
+        min-height: 140px;
+    }
+}
