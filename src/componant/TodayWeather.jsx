@@ -3,7 +3,7 @@ import { GoClockFill } from "react-icons/go";
 import { FaSun } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 
-const TodayWeather = ({ weather,fiveday}) => {
+const TodayWeather = ({ weather,fiveday,todayD}) => {
 
 
     const [date, setDate] = useState("");
@@ -34,6 +34,7 @@ const TodayWeather = ({ weather,fiveday}) => {
         if (datecheck) {
             const currentDate = date.list[0].dt_txt.split(" ")[0];
             setTodayDate(currentDate);
+            todayD(currentDate);
         }
     }, [date]);
 
@@ -62,7 +63,11 @@ const TodayWeather = ({ weather,fiveday}) => {
                             </p>
 
                             <div className='weather-icon'>
-                                <FaSun className='text-warning' />
+                                <img   className=''
+                                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                                width="50"
+                                height="50"
+                            />
                             </div>
 
                             <p className='weather-temp'>

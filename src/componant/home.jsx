@@ -22,6 +22,7 @@ const Home = () => {
 
     const [weather,setWeather] = useState("");
     const [fivedaysdata,setFiveDaysData] = useState([]);
+    const[todayda,settodayda] = useState("");
     
 
     useEffect(()=>{
@@ -61,8 +62,9 @@ const Home = () => {
     const getfiveday = (days)=>{
         setFiveDaysData(days);
         console.log("five days data");
-        
-
+    }
+    const getDate= (todayd)=>{
+        settodayda(todayd);
     }
 
     return (
@@ -126,7 +128,7 @@ const Home = () => {
 
                             {/* search bar */}
                             <div className='child-cont d-flex justify-content-between p-3 pt-1 pb-2 '>
-                                <Search sendCity={getCity}/>
+                                <Search sendCity={getCity}  weather = {weather} todayda ={todayda}/>
                             </div>
 
                             <div className='row p-2 pb-0'>
@@ -140,7 +142,7 @@ const Home = () => {
 
                                     {/* today brodcast */}
                                     <div className='shadow p-2 TodayWeather'>
-                                        <TodayWeather weather = {weather} fiveday={getfiveday} />
+                                        <TodayWeather weather = {weather} todayD = {getDate} fiveday={getfiveday} />
                                     </div>
 
                                     {/* sunrise and sunset */}

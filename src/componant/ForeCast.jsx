@@ -49,7 +49,7 @@ const ForeCast = ({ fivedaysdata }) => {
             <div className='d-flex'>
                 {
                     sortfivedaysdate.map((items, index) =>
-                        <div className=' key={index} shadow me-3 p-2 text-white moreday d-flex flex-column justify-content-center align-items-center border'>
+                        <div  key={index}  className='shadow me-3 p-2 text-white moreday d-flex flex-column justify-content-center align-items-center border'>
                             <span>{items.date}</span>
                             <img
                                 src={`https://openweathermap.org/img/wn/${items.icon}@2x.png`}

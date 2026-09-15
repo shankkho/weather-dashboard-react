@@ -26,8 +26,13 @@ const CurrentWeather = ({weather}) => {
                     </div>
                 </div>
 
-                <div className='d-flex justify-content-center align-items-center gap-'>
-                    <FaSun className='text-warning fs-2' />
+                <div className='d-flex justify-content-center align-items-center '>
+                    {/* <FaSun className='text-warning fs-2' /> */}
+                     <img   className=''
+                                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                                width="50"
+                                height="50"
+                            />
                     <div>
                         <h6 className='mt-3'>{weather.weather[0].description}</h6>
                         <p>Enjoy the weather</p>
@@ -39,7 +44,12 @@ const CurrentWeather = ({weather}) => {
             <div className='ps-5 pt-2 pb-2'>
                 <div className='d-flex gap-4'>
 
-                    <FaSun className='text-warning ' size={80} />
+                    
+                    <img   className=''
+                                src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                                width="150"
+                                height="150"
+                            />
 
                     <div>
                         <h1 className='current-tem'>{Math.round( weather.main.temp)}<sup>o</sup>C</h1>

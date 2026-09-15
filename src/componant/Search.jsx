@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './style.css'
 import { FaLocationDot, FaCalendarDays } from "react-icons/fa6";
 
-const Search = ({sendCity}) => {
+const Search = ({sendCity,weather,todayda}) => {
 
     const [inputCity,setInputCity]=useState("");
 
@@ -32,11 +32,11 @@ const Search = ({sendCity}) => {
             <div className='d-flex gap-3'>
                 <div className='d-flex justify-content-center align-items-center gap-1'>
                     <FaLocationDot className='text-danger' />
-                    <span className='text-white'>Nagpur,India</span>
+                    <span className='text-white'>{weather.name} , {weather.sys.country}</span>
                 </div>
                 <div className='d-flex justify-content-center align-items-center gap-1'>
                     <FaCalendarDays className='text-primary' />
-                    <span className='text-white'>Mon,8 sept 2026</span>
+                    <span className='text-white'>{todayda}</span>
                 </div>
 
             </div>
