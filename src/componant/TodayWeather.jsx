@@ -3,7 +3,7 @@ import { GoClockFill } from "react-icons/go";
 import { FaSun } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 
-const TodayWeather = ({ weather}) => {
+const TodayWeather = ({ weather,fiveday}) => {
 
 
     const [date, setDate] = useState("");
@@ -22,6 +22,7 @@ const TodayWeather = ({ weather}) => {
             if (response.ok) {
                 console.log(data);
                 setDate(data);
+                fiveday(data);
                 setdatecheck(true);
             }
         }
@@ -39,7 +40,7 @@ const TodayWeather = ({ weather}) => {
     const todayHrData = date?.list?.filter(items =>
         items.dt_txt.startsWith(todaydate)
     ) || [];
-    console.log(todayHrData);
+ 
 
 
 

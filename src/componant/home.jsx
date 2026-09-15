@@ -16,11 +16,12 @@ const Home = () => {
     const [allvalues,setvalues] = useState({
         FirstCity : "",
         errorData :"",
+       
         
     });
 
     const [weather,setWeather] = useState("");
-
+    const [fivedaysdata,setFiveDaysData] = useState([]);
     
 
     useEffect(()=>{
@@ -56,6 +57,12 @@ const Home = () => {
 
     const getCity = (cityName)=>{
         setvalues({...allvalues,FirstCity:cityName})
+    }
+    const getfiveday = (days)=>{
+        setFiveDaysData(days);
+        console.log("five days data");
+        
+
     }
 
     return (
@@ -133,7 +140,7 @@ const Home = () => {
 
                                     {/* today brodcast */}
                                     <div className='shadow p-2 TodayWeather'>
-                                        <TodayWeather weather = {weather}  />
+                                        <TodayWeather weather = {weather} fiveday={getfiveday} />
                                     </div>
 
                                     {/* sunrise and sunset */}
@@ -147,7 +154,7 @@ const Home = () => {
                             {/* five day forecast */}
                             <div className='p-2'>
                                 <div className=' forecast-main p-2 '>
-                                    <ForeCast />
+                                    <ForeCast fivedaysdata = {fivedaysdata}/>
                                 </div>
                             </div>
 
